@@ -1,3 +1,6 @@
-class Movie
-  # To change this template use File | Settings | File Templates.
+require 'rubygems'
+require 'sequel'
+
+class Movie < Sequel::Model
+
 end
