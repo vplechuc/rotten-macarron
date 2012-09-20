@@ -4,7 +4,9 @@ require "sequel"
 # connect to an in-memory database
 DB = Sequel.sqlite('movies.db')
 
-DB.drop_table(:movies)
+#DB.drop_table(:movies)
+
+
 
 # create an items table
 DB.create_table :movies do
@@ -14,6 +16,7 @@ DB.create_table :movies do
   DateTime :release_date
   Text :description
 end
+
 
 movies = DB[:movies]
 

@@ -1,9 +1,14 @@
-require "rubygems"
-require "sinatra"
-require "haml"
+require 'rubygems'
+require 'sinatra'
+require 'haml'
+
+require File.join(File.dirname(__FILE__), 'models/movie')
+
+
 
 get '/' do
-  haml :index
+ @movie = Movie.all()
+ haml :index
 end
 
 
