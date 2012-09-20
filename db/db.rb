@@ -4,7 +4,10 @@ require "sequel"
 # connect to an in-memory database
 DB = Sequel.sqlite('movies.db')
 
-#DB.drop_table(:movies)
+=begin
+
+
+DB.drop_table(:movies)
 
 
 
@@ -18,6 +21,7 @@ DB.create_table :movies do
 end
 
 
+
 movies = DB[:movies]
 
 # populate the table
@@ -26,3 +30,5 @@ movies.insert(:title=>"Commander II", :rating=>"PG", :release_date=>"01-Jan-1998
 movies.insert(:title=>"El Ryche", :rating=>"RP", :release_date=>"12-Nov-1977", :description=>"Pancheada")
 # print out the number of records
 puts "Movies count: #{movies.count}"
+
+=end
