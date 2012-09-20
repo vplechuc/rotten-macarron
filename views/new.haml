@@ -1,0 +1,19 @@
+%h1.title New Movie
+#main
+%h2 add Movies
+%form{:action => "/add", :method => "post"}
+
+      %label{:for => "title"} Title:
+      %input.form-login{:type => "textbox", :name => "title", :id => "title"}
+      %br/
+      %label{:for => "password"} Description:
+      %input.form-login{:type => "textbox", :name => "description", :id => "description"}
+      %br/
+      %label{:for => "password"} Rating:
+      %input.form-login{:type => "textbox", :name => "rating", :id => "rating"}
+      %br/
+      %label{:for => "password"} Release:
+      %input.form-login{:type => "textbox", :name => "release", :id => "release"}
+      %br/
+      %input{:type => "submit", :value => "Save!"}
+

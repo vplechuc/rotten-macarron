@@ -12,6 +12,7 @@ DB.drop_table(:movies)
 
 
 # create an items table
+=begin
 DB.create_table :movies do
   primary_key :id
   String :title
@@ -19,6 +20,7 @@ DB.create_table :movies do
   DateTime :release_date
   Text :description
 end
+=end
 
 
 
