@@ -22,9 +22,9 @@ post '/new' do
 end
 
 post "/add" do
-  @movietmp = Movie.new
+  @movietmp=Movie.new
   @movietmp.title=params[:title]
-  @movietmp.description==params[:description]
+  @movietmp.description=params[:description]
   @movietmp.rating=params[:rating]
   @movietmp.release=params[:release]
   @movietmp.save
