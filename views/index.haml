@@ -1,22 +1,35 @@
-%h1 All Movies
-
+%h2 All Movies
 %table#movies
   %thead
     %tr
-      %th.title_header Title
+      %th.title_header
+        %a{ :href => "/sort"} Movie Title
       %th Rating
       %th Release Date
       %th More Info
+      %th
+      %th
   %tbody
-    - @movie.each do |movie|
+    =@movie.each do |movie|
       %tr
         %td= movie.title
         %td= movie.rating
         %td= movie.release_date
-        %td= movie.description
-%br
-%br
-%a{:href => '/add'}  Add new movie
-%br
-%br
+        %td.td-delete
+          %form{:action => "/#{movie.title}", :method => "get"}
+            %input{:class => "input-button-table",:type => "submit", :value => "Show"}
+        %td.td-delete
+          %form{:action => "/edit/#{movie.id}", :method => "get"}
+            %input{:class => "input-button-table",:type => "submit",:value => "Modify"}
+        %td.td-delete
+          %form{:action => "/#{movie.id}", :method => "post"}
+            %input{:type => "hidden", :name => "_method", :value => "delete"}
+            %input{:class => "input-button-table",:type => "submit",:name => "_method", :value => "Delete"}
 
+
+%br
+%br
+%form{:action => "/new", :method => "get"}
+  %input{:class => "input-button",:type => "submit",:value => "Add new movie"}
+%br
+%br

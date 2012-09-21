@@ -2,11 +2,9 @@ require "rubygems"
 require "sequel"
 
 
-DB = Sequel.connect(:adapter => 'mysql', :user => 'root', :host => 'localhost', :database => 'rotten_potatoes',:password=>'mb.161111')
+DB = Sequel.connect(:adapter => 'mysql', :user => 'root', :host => 'localhost', :database => 'rotten_potatoes',:password=>'root')
 
 
-class Movie < Sequel::Model
-end
 
 =begin
 # create a dataset from the items table

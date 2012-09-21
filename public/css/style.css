@@ -43,10 +43,11 @@ table#movies th {
     border: 2px solid white;
     font-weight: bold;
     background-color: wheat;
+    text-align: center;
 }
 table#movies th, table#movies td {
     padding: 4px;
-    text-align: left;
+    text-align: center;
 }
 table#movies th.hilite {
     background-color: yellow;
@@ -61,4 +62,72 @@ form label {
     line-height: 25px;
     font-weight: bold;
     color: maroon;
+}
+
+
+
+/*Jquery calendar*/
+.ui-datepicker-calendar{
+    background-color: wheat;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid maroon;
+    padding: 5px;
+}
+
+.ui-datepicker-header{
+    background-color: wheat;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid maroon;
+    padding: 5px;
+}
+
+.ui-icon{
+    margin-right: 10px;;
+}
+
+/*Buttons*/
+.input-button{
+    background-color:maroon;
+    color: white;
+    font-weight: bold;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    height: 30px;
+    width: auto;
+}
+
+p.showdata{
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.td-delete{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.input-button-table{
+    background-color:maroon;
+    color: white;
+    font-weight: bold;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    height: 30px;
+    width: auto;
+    margin-left: 20px;
 }
