@@ -10,26 +10,26 @@
       %th
       %th
   %tbody
-    =@movie.each do |movie|
+    - @movie.each do |movie|
       %tr
         %td= movie.title
         %td= movie.rating
         %td= movie.release_date
         %td.td-delete
           %form{:action => "/#{movie.title}", :method => "get"}
-            %input{:class => "input-button-table",:type => "submit", :value => "Show"}
+            %input{:class => "input-button",:type => "submit", :value => "Show"}
         %td.td-delete
           %form{:action => "/edit/#{movie.id}", :method => "get"}
-            %input{:class => "input-button-table",:type => "submit",:value => "Modify"}
+            %input{:class => "input-button",:type => "submit",:value => "Modify"}
         %td.td-delete
           %form{:action => "/#{movie.id}", :method => "post"}
             %input{:type => "hidden", :name => "_method", :value => "delete"}
-            %input{:class => "input-button-table",:type => "submit",:name => "_method", :value => "Delete"}
+            %input{:class => "input-button",:type => "submit",:name => "_method", :value => "Delete"}
 
 
 %br
 %br
 %form{:action => "/new", :method => "get"}
-  %input{:class => "input-button",:type => "submit",:value => "Add new movie"}
+  %input{:class => "input-button input-button-add",:type => "submit",:value => "Add new movie"}
 %br
 %br
